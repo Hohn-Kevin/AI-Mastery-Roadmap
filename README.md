@@ -2,7 +2,7 @@
 
 AI Mastery Roadmap is a long-term, project-based learning repository for developing from foundational programming skills toward advanced AI engineering and research.
 
-The repository is not intended to be a conventional course. It is the persistent, version-controlled state of the learning journey: roadmap, missions, projects, progress, reflections, achievements, and increasingly difficult technical challenges.
+The repository is not intended to be a conventional course. It is the persistent, version-controlled state of the learning journey: roadmap, missions, projects, progress, reflections, and increasingly difficult technical challenges.
 
 ## Goal
 
@@ -26,7 +26,7 @@ The roadmap follows a few core principles:
 
 AI acts primarily as a tutor, reviewer, coach, and debugging partner.
 
-During repository bootstrap and roadmap maintenance, AI may create or update structural files such as documentation, templates, metadata, and learning-state definitions.
+During repository setup, documentation, curriculum design, templates, and progress infrastructure work, AI may directly create or update project files.
 
 Once a mission is explicitly part of the learning phase, the default rule changes:
 
@@ -42,46 +42,54 @@ Typical elements include:
 
 - **Levels** — major stages of technical development.
 - **Missions** — focused learning units that combine concepts with practical work.
-- **Projects** — larger artifacts that demonstrate applied skills.
-- **Boss challenges** — assessments that require combining previously learned skills with limited guidance.
-- **Achievements** — meaningful milestones such as the first CLI application, first package, first neural network, or first paper reproduction.
+- **Projects** — durable artifacts that demonstrate applied skills.
+- **Boss challenges** — assessments that require combining previously learned skills with greater independence.
+- **Review missions** — targeted work when later evidence exposes a skill gap.
 - **Progress state** — a durable record of completed work, demonstrated skills, weak areas, and next steps.
+
+The detailed learning rules live in [`docs/learning/`](docs/learning/).
 
 ## High-Level Roadmap
 
-The exact roadmap may evolve as knowledge and goals develop, but the intended progression is:
+The current roadmap progresses through eight directional levels:
 
-1. **Programming Foundations** — Python fundamentals and small complete programs.
-2. **Developer Foundations** — modules, packages, environments, files, JSON, APIs, error handling, logging, Git, and Linux fundamentals.
-3. **Software Engineering** — architecture, testing, typing, object-oriented design, concurrency, performance, and maintainable systems.
-4. **AI Foundations** — core machine-learning algorithms implemented and understood from first principles where useful.
-5. **Machine Learning Engineering** — NumPy, pandas, visualization, scikit-learn where appropriate, PyTorch, training workflows, evaluation, and reproducibility.
-6. **Deep Learning and Modern AI** — neural networks, attention, transformers, embeddings, fine-tuning, retrieval, and related systems.
-7. **Research Practice** — reading papers, reproducing results, designing experiments, evaluating claims, and eventually developing original ideas.
+1. Python Foundations
+2. Software Engineering Foundations
+3. Professional Python
+4. Machine Learning Foundations
+5. Deep Learning
+6. Transformers
+7. LLM Engineering
+8. AI Research Practice
+
+See [`docs/learning/roadmap.md`](docs/learning/roadmap.md) for the maintained roadmap and level outcomes.
 
 ## Repository Structure
 
 ```text
 AI-Mastery-Roadmap/
 ├── .github/       # GitHub issue and pull request templates
-├── docs/          # Repository-wide documentation and learning-system specifications
-├── levels/        # Definitions and completion criteria for major learning stages
-├── missions/      # Individual learning missions
-├── projects/      # Larger practical projects created during the journey
+├── docs/
+│   ├── project/   # Project scope, governance, decisions, and GitHub workflow
+│   └── learning/  # Roadmap, learning model, and progress model
+├── levels/        # Detailed curricula and completion criteria for learning levels
+├── missions/      # Individual learning missions and challenges
+├── projects/      # Durable learner-built artifacts
+├── progress/      # Compact current learning state
 ├── resources/     # Curated references and learning resources
-├── templates/     # Reusable templates for missions, reviews, reflections, and progress
+├── templates/     # Reusable learning/repository templates
 ├── README.md
 ├── CONTRIBUTING.md
 └── CODE_OF_CONDUCT.md
 ```
 
-The structure may expand when a concrete need appears. New architecture should not be added merely for hypothetical future requirements.
+See [`docs/README.md`](docs/README.md) for the documentation index and source-of-truth map.
 
 ## State and Agent Independence
 
 A central purpose of this repository is to make the learning journey independent of any individual chat, model, or AI provider.
 
-Important learning state should therefore be recorded in the repository rather than relying on conversational memory. A future tutor should be able to inspect the repository and determine, as far as practical:
+Important learning state is recorded in the repository. A future tutor should be able to inspect committed artifacts and determine, as far as practical:
 
 - which missions are complete;
 - which skills have been demonstrated;
@@ -91,7 +99,7 @@ Important learning state should therefore be recorded in the repository rather t
 - which level is currently active;
 - what the next appropriate challenge is.
 
-The exact progress format will be introduced by later repository issues rather than prematurely defined during the initial foundation issue.
+The compact state lives in `progress/progress.json`; the detailed evidence remains in missions, projects, reflections, reviews, and Git history.
 
 ## Public Learning Journey
 
@@ -101,6 +109,6 @@ The objective is not a perfectly polished history. The objective is a credible, 
 
 ## Current Status
 
-Repository foundation is being initialized under Issue #1.
+The repository is currently in **Phase 1 — Framework**.
 
-The actual learning journey begins after the repository structure, contribution rules, GitHub templates, and initial roadmap/state conventions have been established.
+Repository foundation, the high-level learning model, and persistent progress model are established. Project governance and documentation architecture are being consolidated before the detailed Level 1 curriculum and the first actual learning mission are introduced.
