@@ -24,7 +24,9 @@ Direct changes to `main` are not part of the normal workflow. The initial reposi
 
 ## Project Board
 
-The GitHub Project `AI Mastery Roadmap` is the central work overview.
+The public GitHub Project **AI Mastery Roadmap — Development Board** is the central work overview:
+
+https://github.com/users/Hohn-Kevin/projects/1
 
 Statuses:
 
@@ -54,7 +56,7 @@ Future milestones should represent meaningful completed stages such as learning 
 | Branches | Active | Isolate issue/focused work from `main` |
 | Pull Requests | Active | Review checkpoint before accepted changes reach `main` |
 | Rulesets / Branch Protection | Active | Protect `main` and enforce the PR workflow |
-| Labels | Active | Categorize issues and PRs when a stable taxonomy is useful |
+| Labels | Planned / not yet configured | Categorize issues and PRs once a stable taxonomy is defined |
 | Releases / Tags | Planned | Mark meaningful completed levels or major versions |
 | GitHub Actions | Planned | Add automated validation/testing when the repository benefits from it |
 | Dependabot / Security | Planned | Enable when real dependency/code risk makes the features relevant |
@@ -63,9 +65,9 @@ Future milestones should represent meaningful completed stages such as learning 
 
 ## Labels
 
-Labels are intentionally enabled as a project tool, but the taxonomy should remain small and purposeful.
+Labels are intended as a project-management tool, but no project-specific taxonomy has been configured yet.
 
-Do not create a large label set in advance. Introduce labels when recurring issue/PR categories make filtering materially useful. Level-specific labels should not be created until level work actually exists.
+The taxonomy should remain small and purposeful. Do not create a large label set in advance. Introduce labels when recurring issue/PR categories make filtering materially useful. Level-specific labels should not be created until level work actually exists.
 
 ## Ruleset
 
@@ -86,8 +88,8 @@ A different merge method may be used when preserving individual commits has a cl
 
 ## Automation
 
-Project automation should reduce repetitive status maintenance without obscuring state transitions.
+Project automation is already configured and active to reduce repetitive status maintenance.
 
-Useful initial automation includes adding new repository issues to the Project, placing new work in `Backlog`, and moving completed/closed work to `Done` where appropriate.
+Current automation handles routine Project state transitions such as adding relevant work to the Project and moving closed or completed work into the appropriate final state. The exact GitHub workflow configuration remains managed in the Project itself.
 
-Automation should not replace deliberate review or silently mark learning work complete without the evidence required by the learning model.
+Automation supports the operational workflow but does not replace deliberate review, scope checks, or the evidence required before learning work is considered complete.
