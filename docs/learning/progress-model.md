@@ -84,7 +84,7 @@ When skills begin to be tracked, a minimal skill entry should follow this shape:
 }
 ```
 
-Allowed initial statuses are defined in `docs/learning-model.md`:
+Allowed initial statuses are defined in `learning-model.md`:
 
 - `not_started`
 - `introduced`
@@ -127,7 +127,7 @@ The initial state deliberately represents a journey that has not started:
 - no review queue;
 - no learner reflections.
 
-The next step after this framework issue is to define the first detailed curriculum before assigning Mission 1.
+The next step after the framework phase is to define the first detailed curriculum before assigning Mission 1.
 
 ## Future Extension
 
