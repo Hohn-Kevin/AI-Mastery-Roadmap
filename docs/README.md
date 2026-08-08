@@ -10,7 +10,7 @@ The repository is intended to remain understandable without relying on the memor
 
 Project-wide documentation and governance.
 
-- `scope.md` — purpose, boundaries, and long-term direction of the repository.
+- `initial-scope.md` — original purpose, stable boundaries, and long-term destination of the repository.
 - `principles.md` — foundational project and learning-integrity principles.
 - `github-workflow.md` — how GitHub features are used to operate the project.
 - `decisions.md` — concise record of durable project decisions.
@@ -29,7 +29,8 @@ Different information belongs in different locations:
 
 | Information | Source of truth |
 | --- | --- |
-| Project purpose and boundaries | `docs/project/` |
+| Original project purpose, stable boundaries, and long-term destination | `docs/project/initial-scope.md` |
+| Project principles and governance | `docs/project/` |
 | Contribution workflow | `CONTRIBUTING.md` |
 | High-level learning roadmap | `docs/learning/roadmap.md` |
 | Learning and assessment rules | `docs/learning/learning-model.md` |
