@@ -42,7 +42,7 @@ Meaningful work should normally follow the issue → branch → commit → pull 
 
 Work should remain inside the active issue's scope.
 
-Useful discoveries outside that scope should become separate issues rather than silently expanding the current task.
+Useful discoveries outside that scope should become separate issues or, when they are clearly subordinate to the current work, suitable sub-issues rather than silently expanding the current task.
 
 ## Prefer the Smallest Sufficient System
 
