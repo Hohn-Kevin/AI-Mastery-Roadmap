@@ -12,7 +12,7 @@ Changes to this document should therefore be rare and limited to correcting a ge
 
 The goal of this journey is not merely to learn Python.
 
-The long-term objective is to develop from a Fachinformatiker background toward strong AI engineering capability and, ultimately, toward research-oriented work in artificial intelligence.
+The long-term objective is to develop from an apprentice IT specialist background toward strong AI engineering capability and, ultimately, toward research-oriented work in artificial intelligence.
 
 Python is the first major tool in that journey, not the destination.
 
@@ -73,7 +73,7 @@ Repository setup, documentation, curriculum design, templates, progress infrastr
 
 The repository is intended to be more than a storage location for code.
 
-It should act as the persistent state of the learning journey so that progress does not depend on the memory of one chat, one tutor, one agent, or one AI model.
+It should act as the persistent state and long-term memory for the AI tutor and the learning journey, so that progress does not depend on the memory of one chat, one tutor, one agent, or one AI model.
 
 Over time, the repository should make it possible to determine from durable evidence:
 
