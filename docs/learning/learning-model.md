@@ -49,6 +49,18 @@ Projects are durable artifacts produced during the journey. A project may belong
 
 Projects should be useful enough to demonstrate real understanding rather than existing only as filler. Where practical, they should be independently runnable, documented, and suitable for later portfolio review.
 
+## Artifact Lifecycle
+
+Mission artifacts are durable learning evidence, but they are not necessarily frozen after the mission that created them.
+
+A later mission may deliberately create a fresh standalone artifact, extend or refactor an existing artifact, grow a project seed, or contribute a new milestone to a larger project. The choice should be made from the learning objective and the evidence that still needs to be demonstrated.
+
+Reuse is valuable when it teaches the learner to understand, change, improve, and deliberately reuse existing work. It must not be used to bypass a skill that still needs fresh independent practice or transfer evidence.
+
+Artifact roles are relationships between learning work and artifacts rather than permanent classifications. An artifact that begins as a small standalone result may later become the seed of a larger project.
+
+The durable cross-level rules for artifact roles, reuse decisions, evidence preservation, bosses, portfolio relationship, and cross-level evolution are defined in `artifact-lifecycle.md`.
+
 ## Skill Evidence
 
 Skills are not measured by arbitrary completion percentages.
@@ -60,9 +72,12 @@ A skill should be tracked through evidence such as:
 - boss challenges in which it was transferred to a new context;
 - review comments and recurring mistakes;
 - learner explanations and reflections;
-- whether substantial tutor intervention was required.
+- whether substantial tutor intervention was required;
+- artifact evolution that shows the learner can understand and deliberately modify earlier work.
 
 The progress model stores a concise status, while the repository history and completed artifacts provide the detailed evidence.
+
+Artifact reuse does not automatically prove fresh transfer. The tutor should distinguish capability that was already present in reused code from capability newly demonstrated by the learner.
 
 ## Skill Status
 
@@ -90,6 +105,7 @@ The tutor may:
 - suggest tests;
 - challenge design decisions;
 - identify gaps and recommend review work;
+- inspect existing learner artifacts and choose whether new work or deliberate reuse best supports the current objective;
 - update or propose updates to repository learning state after evidence exists.
 
 The tutor should not normally provide the complete core solution to an active learning mission before the learner has made a genuine attempt.
@@ -107,9 +123,11 @@ The tutor should, in order:
 3. Check for skills marked `review_needed` and decide whether they block progression.
 4. Review recently completed mission reflections and review findings.
 5. Check the current level and its curriculum once that curriculum exists.
-6. Select the next planned mission or create a targeted review mission when justified by evidence.
-7. Avoid skipping prerequisites solely because the learner wants faster progression.
-8. Avoid repeating already demonstrated material without a reason recorded in the repository.
+6. Inspect relevant existing learner artifacts and any planned artifact relationships.
+7. Select the next planned mission or create a targeted review mission when justified by evidence.
+8. Decide whether the mission should create fresh work or evolve existing work according to `artifact-lifecycle.md`.
+9. Avoid skipping prerequisites solely because the learner wants faster progression.
+10. Avoid repeating already demonstrated material without a reason recorded in the repository.
 
 If repository state and chat statements conflict, the tutor should inspect the relevant committed artifacts and clarify the discrepancy before changing progress.
 
@@ -117,8 +135,9 @@ If repository state and chat statements conflict, the tutor should inspect the r
 
 Each completed mission should eventually record at least:
 
-- what was built;
+- what was built or changed;
 - which skills were exercised;
+- whether the work created a new artifact or intentionally evolved existing work when relevant;
 - what the learner can now explain or do;
 - important mistakes or difficulties;
 - any remaining gap;
