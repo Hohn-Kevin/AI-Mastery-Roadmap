@@ -73,8 +73,8 @@ The learner chooses the exact variable names, program order, prompts, and wordin
 
 ## Acceptance Criteria
 
-- [ ] A usable Python 3 interpreter has been installed or verified locally.
-- [ ] The learner can identify the interpreter command used on the current machine and show its version.
+- [x] A usable Python 3 interpreter has been installed or verified locally.
+- [x] The learner can identify the interpreter command used on the current machine and show its version.
 - [ ] The artifact contains a learner-created Python source file at `projects/level-01/fuel-cost-estimator/fuel_cost_estimator.py`.
 - [ ] The learner can run the source file from the terminal without the tutor controlling every command.
 - [ ] The program asks for trip distance in kilometers.
@@ -106,7 +106,7 @@ Fill this section as repository evidence exists.
 - Pull request: `#14`
 - Relevant commit / merge commit: `pending`
 - Prior artifact state: `n/a`
-- Additional evidence: Python runtime/version verification and learner explanations to be recorded during the mission.
+- Additional evidence: Local Python runtime verified with `py --version` -> `Python 3.13.14`.
 
 ## Tutor Assistance Record
 
