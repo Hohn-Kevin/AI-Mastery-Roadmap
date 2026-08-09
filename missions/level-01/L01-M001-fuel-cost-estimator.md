@@ -7,7 +7,7 @@
 | Mission ID | `L01-M001` |
 | Level | `1 — Python Foundations` |
 | Type | `mission` |
-| Status | `active` |
+| Status | `review` |
 | Curriculum | `levels/level-01-python-foundations.md` — Segment 1 / M001 |
 | GitHub Issue | `#13` |
 | Artifact Role | `standalone` |
@@ -123,46 +123,48 @@ Record only assistance that materially affects interpretation of the learning ev
 
 ## Learner Reflection
 
-Complete after the implementation attempt and before final review.
-
 ### What I built or changed
 
-_To be completed by the learner._
+Ich habe einen Fuel-Cost-Estimator gebaut. Dieser fragt mittels `input()` folgende Werte vom User ab: gefahrene Kilometer, durchschnittlicher Verbrauch auf 100 Kilometer und Kosten pro Liter Sprit. Danach rechnet er intern eine Verbrauchskostenrechnung: gefahrene Kilometer / 100, um auf dasselbe Format wie der Durchschnittsverbrauch zu kommen; Ergebnis davon * Durchschnittsverbrauch, um den tatsächlichen Verbrauch zu ermitteln; und den tatsächlichen Verbrauch in Litern * Spritpreis pro Liter, um die entstandenen Kosten zu errechnen. Das Ergebnis des tatsächlichen Verbrauchs und der Kosten wird dann mittels `print()` ausgegeben.
 
 ### What I can now explain or do
 
-_To be completed by the learner._
+Ich verstehe, wie `input()` grundsätzlich funktioniert, dass es standardmäßig einen String liefert und für die Rechnung in einen gewünschten numerischen Typ geändert werden muss. Ich verstehe, dass Variablen Ergebnisse von Rechnungen speichern können und dass man mittels f-String die Ausgabe von `print()` direkt mit Variablen verbinden und formatieren kann — im Sinne einer veränderten Ausgabe, nicht eines veränderten Werts.
 
 ### Important mistakes or difficulties
 
-_To be completed by the learner._
+Ich würde nicht sagen, dass es Missverständnisse oder Schwierigkeiten gab. Lediglich, dass `input()` standardmäßig ein String ist, hat einen zweiten Anlauf gebraucht, wurde danach aber verstanden.
 
 ### What I would approach differently
 
-_To be completed by the learner._
+Nichts. Ich bin mit dem Lernergebnis zufrieden.
 
 ### Remaining uncertainty
 
-_To be completed by the learner._
+Aus dieser Mission explizit nichts. Mal sehen, was die Zukunft bringt.
 
 ## Review Outcome
 
-Complete during tutor review.
-
-**Result:** `pending`
+**Result:** `accepted`
 
 ### Findings
 
-- Pending learner implementation and review.
+- The learner-written implementation satisfies the mission brief and all acceptance criteria.
+- The arithmetic is correct and was validated with both required examples plus an additional learner-chosen example.
+- The learner demonstrated and explained the essential data flow from textual input through numeric conversion and arithmetic to formatted output.
+- The implementation stays within Level 1 scope and does not introduce unnecessary abstractions or dependencies.
+- Non-blocking hygiene note: the current Python source does not end with a final newline. This does not affect mission correctness or acceptance.
 
 ### Skill Evidence Changes
 
-- Pending review.
+- Evidence recorded for basic terminal execution of Python source files, `input()`/`print()`, variables, `float()` conversion, arithmetic, f-string formatting, manual example checking, and explanation of basic program data flow.
+- This mission contributes evidence toward these skills; it does not by itself establish long-term mastery.
 
 ### Remaining Gaps / Review Needs
 
-- Pending review.
+- No mission-specific blocking gaps remain.
+- Invalid-input handling, functions, automated tests, and other later concepts remain intentionally outside this mission's scope.
 
 ### Completion Decision
 
-Pending learner implementation, reflection, and tutor review.
+Accepted for merge. The mission remains in `review` until PR #14 is explicitly approved for merge by the learner and the post-merge completion/progress state is recorded.
