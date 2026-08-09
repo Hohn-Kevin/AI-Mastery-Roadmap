@@ -103,7 +103,7 @@ Fill this section as repository evidence exists.
 
 - Artifact: `projects/level-01/fuel-cost-estimator/`
 - GitHub Issue: `#13`
-- Pull request: `pending`
+- Pull request: `#14`
 - Relevant commit / merge commit: `pending`
 - Prior artifact state: `n/a`
 - Additional evidence: Python runtime/version verification and learner explanations to be recorded during the mission.
