@@ -21,6 +21,7 @@ Documentation for the learning system itself.
 
 - `roadmap.md` — high-level progression from Python foundations to AI research practice.
 - `learning-model.md` — missions, challenges, projects, skill evidence, and tutor behavior.
+- `mission-system.md` — canonical mission identifiers, mission-file structure, lifecycle, evidence, and Issue/branch/PR operation.
 - `artifact-lifecycle.md` — cross-level rules for standalone, evolving, reusable, and project-based learner artifacts.
 - `progress-model.md` — persistent learning-state model and evidence rules.
 
@@ -35,10 +36,11 @@ Different information belongs in different locations:
 | Contribution workflow | `CONTRIBUTING.md` |
 | High-level learning roadmap | `docs/learning/roadmap.md` |
 | Learning and assessment rules | `docs/learning/learning-model.md` |
+| Mission identifiers, file format, lifecycle, and mission workflow | `docs/learning/mission-system.md` |
 | Artifact lifecycle and reuse rules | `docs/learning/artifact-lifecycle.md` |
 | Progress-state semantics | `docs/learning/progress-model.md` |
 | Detailed level curricula | `levels/` |
-| Active and completed mission definitions | `missions/` |
+| Instantiated active and completed mission records | `missions/` |
 | Durable learner-built artifacts | `projects/` |
 | Current compact learning state | `progress/` |
 | Supporting learning references | `resources/` |

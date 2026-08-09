@@ -22,6 +22,38 @@ Meaningful repository work should normally follow:
 
 Direct changes to `main` are not part of the normal workflow. The initial repository bootstrap was a one-time setup condition, not the ongoing model.
 
+## Learning Mission Flow
+
+Actual learning missions use the same GitHub foundation with one important adaptation: the pull request is normally opened **early as a draft** instead of only after implementation is finished.
+
+One instantiated mission normally uses:
+
+1. one mission Issue;
+2. one dedicated issue branch;
+3. one mission file under `missions/`;
+4. one draft pull request for the complete mission lifecycle;
+5. learner commits on that branch;
+6. readiness for review when implementation and reflection are complete;
+7. tutor review and learner corrections where needed;
+8. final progress/evidence recording;
+9. accepted merge, which completes the mission Issue.
+
+The branch naming convention for a mission is:
+
+```text
+issue-<issue-number>-<canonical-mission-id-lowercase>-<short-title>
+```
+
+Example:
+
+```text
+issue-12-l01-m001-fuel-cost-estimator
+```
+
+A mission PR may use `Closes #<issue-number>` when merge should represent actual completion of that mission. Planning/curriculum issues that are intentionally meant to remain open must not use an auto-closing relationship merely because a related PR exists.
+
+The detailed mission status, evidence, artifact, reflection, and progress rules live in `../learning/mission-system.md`.
+
 ## Project Board
 
 The public GitHub Project **AI Mastery Roadmap — Development Board** is the central work overview:
@@ -42,7 +74,7 @@ Closed historical framework issues are retained in the Project so the board refl
 
 Milestones group meaningful larger stages.
 
-The initial milestone is `Phase 1 - Framework`, covering repository foundation, learning/progress architecture, documentation/governance, and the curriculum framework required before actual learning begins.
+The initial milestone is `Phase 1 - Framework`, covering repository foundation, learning/progress architecture, documentation/governance, artifact and mission-system rules, and the curriculum framework required before actual learning begins.
 
 Future milestones should represent meaningful completed stages such as learning levels or major project phases. They should not be created merely to increase tracking detail.
 
@@ -85,6 +117,8 @@ Ruleset configuration lives in GitHub itself; this document records the intended
 Focused issue work should normally use squash merge so `main` retains a concise, understandable history while the working branch may contain multiple implementation commits.
 
 A different merge method may be used when preserving individual commits has a clear reason.
+
+For an evolving learner artifact, squash merge remains compatible with historical evidence as long as the mission record preserves the relevant pull request and final merge commit. Working-branch commits may provide additional context but should not be the only recoverable evidence.
 
 ## Automation
 

@@ -19,6 +19,10 @@ A mission should:
 
 A mission is not considered complete merely because the final program works. The learner should also be able to explain the important concepts and decisions involved.
 
+Instantiated missions use the canonical identifiers, mission-file structure, status lifecycle, Issue/branch/PR workflow, evidence record, and completion process defined in `mission-system.md`.
+
+The curriculum may plan future missions before they exist as mission files. A mission file is created when the mission is instantiated for actual learning work, not merely because its curriculum entry exists.
+
 ## Boss / Challenge
 
 A boss or challenge is a larger assessment that combines skills from several previous missions.
@@ -35,6 +39,8 @@ A boss should:
 
 Completing a boss is a strong signal that the learner is ready to advance, but it is not an automatic guarantee. Review findings and unresolved skill gaps still matter.
 
+Bosses use the same mission system as normal and review missions while preserving their stronger transfer-assessment purpose.
+
 ## Review Mission
 
 A review mission is a targeted return to a skill that has proven weak, forgotten, or insufficiently understood.
@@ -42,6 +48,8 @@ A review mission is a targeted return to a skill that has proven weak, forgotten
 Review missions are created when evidence in the repository shows that a learner repeatedly struggles with a concept, cannot explain it, or depends on excessive assistance to use it.
 
 Review is part of progression, not a failure state.
+
+Review missions receive their own canonical mission identifiers and evidence records so later tutors can understand why review was required and whether the gap was resolved.
 
 ## Projects
 
@@ -75,7 +83,7 @@ A skill should be tracked through evidence such as:
 - whether substantial tutor intervention was required;
 - artifact evolution that shows the learner can understand and deliberately modify earlier work.
 
-The progress model stores a concise status, while the repository history and completed artifacts provide the detailed evidence.
+The progress model stores a concise status, while mission records, repository history, reviews, and completed artifacts provide the detailed evidence.
 
 Artifact reuse does not automatically prove fresh transfer. The tutor should distinguish capability that was already present in reused code from capability newly demonstrated by the learner.
 
@@ -106,11 +114,12 @@ The tutor may:
 - challenge design decisions;
 - identify gaps and recommend review work;
 - inspect existing learner artifacts and choose whether new work or deliberate reuse best supports the current objective;
+- create mission definitions, acceptance criteria, administrative metadata, and progress bookkeeping;
 - update or propose updates to repository learning state after evidence exists.
 
 The tutor should not normally provide the complete core solution to an active learning mission before the learner has made a genuine attempt.
 
-Repository setup, documentation, templates, curriculum design, and progress infrastructure are not learner-solution work and may be created with AI assistance.
+Repository setup, documentation, templates, curriculum design, mission administration, and progress infrastructure are not learner-solution work and may be created with AI assistance.
 
 ## Determining the Next Mission
 
@@ -118,29 +127,33 @@ A future tutor should determine the next step from repository evidence, not from
 
 The tutor should, in order:
 
-1. Read the current progress state.
-2. Check for an active mission and continue it before creating unrelated work.
-3. Check for skills marked `review_needed` and decide whether they block progression.
-4. Review recently completed mission reflections and review findings.
-5. Check the current level and its curriculum once that curriculum exists.
-6. Inspect relevant existing learner artifacts and any planned artifact relationships.
-7. Select the next planned mission or create a targeted review mission when justified by evidence.
-8. Decide whether the mission should create fresh work or evolve existing work according to `artifact-lifecycle.md`.
-9. Avoid skipping prerequisites solely because the learner wants faster progression.
-10. Avoid repeating already demonstrated material without a reason recorded in the repository.
+1. Read the accepted progress state on `main`.
+2. Inspect open mission Issues and draft/open mission pull requests so active branch state is not missed.
+3. If a mission is active, read its mission file and branch progress state and continue it before creating unrelated learning work.
+4. Check for skills marked `review_needed` and decide whether they block progression.
+5. Review recently completed mission reflections and review findings.
+6. Check the current level and its curriculum once that curriculum exists.
+7. Inspect relevant existing learner artifacts and any planned artifact relationships.
+8. Select the next planned mission or create a targeted review mission when justified by evidence.
+9. Decide whether the mission should create fresh work or evolve existing work according to `artifact-lifecycle.md`.
+10. Instantiate the selected work according to `mission-system.md`.
+11. Avoid skipping prerequisites solely because the learner wants faster progression.
+12. Avoid repeating already demonstrated material without a reason recorded in the repository.
 
-If repository state and chat statements conflict, the tutor should inspect the relevant committed artifacts and clarify the discrepancy before changing progress.
+If repository state and chat statements conflict, the tutor should inspect the relevant committed artifacts and active mission work and clarify the discrepancy before changing progress.
 
 ## Completion and Reflection
 
-Each completed mission should eventually record at least:
+Each completed mission records at least:
 
 - what was built or changed;
 - which skills were exercised;
 - whether the work created a new artifact or intentionally evolved existing work when relevant;
 - what the learner can now explain or do;
 - important mistakes or difficulties;
+- material tutor assistance that affects interpretation of the evidence;
 - any remaining gap;
-- whether a review mission is needed.
+- whether a review mission is needed;
+- the review outcome and recoverable repository evidence.
 
-The exact mission file format will be defined with the mission system in a later scoped issue.
+The canonical mission-file structure and completion workflow are defined in `mission-system.md` and instantiated from `../../templates/mission.md`.
