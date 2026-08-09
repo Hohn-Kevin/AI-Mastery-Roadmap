@@ -77,16 +77,16 @@ The learner chooses the exact variable names, program order, prompts, and wordin
 - [x] The learner can identify the interpreter command used on the current machine and show its version.
 - [ ] The artifact contains a learner-created Python source file at `projects/level-01/fuel-cost-estimator/fuel_cost_estimator.py`.
 - [ ] The learner can run the source file from the terminal without the tutor controlling every command.
-- [ ] The program asks for trip distance in kilometers.
-- [ ] The program asks for fuel consumption in liters per 100 kilometers.
-- [ ] The program asks for fuel price in euros per liter.
-- [ ] The entered numeric text is converted into values suitable for calculation.
-- [ ] The program calculates and displays the fuel quantity required for the trip.
-- [ ] The program calculates and displays the total fuel cost.
-- [ ] The final quantities are presented readably, with sensible decimal formatting.
-- [ ] Example `100 km`, `5 L/100 km`, `2 €/L` produces `5.00 L` and `10.00 €` (wording may differ).
-- [ ] Example `250 km`, `6.4 L/100 km`, `1.75 €/L` produces `16.00 L` and `28.00 €` (wording may differ).
-- [ ] The learner has manually checked both examples and at least one additional self-chosen example.
+- [x] The program asks for trip distance in kilometers.
+- [x] The program asks for fuel consumption in liters per 100 kilometers.
+- [x] The program asks for fuel price in euros per liter.
+- [x] The entered numeric text is converted into values suitable for calculation.
+- [x] The program calculates and displays the fuel quantity required for the trip.
+- [x] The program calculates and displays the total fuel cost.
+- [x] The final quantities are presented readably, with sensible decimal formatting.
+- [x] Example `100 km`, `5 L/100 km`, `2 €/L` produces `5.00 L` and `10.00 €` (wording may differ).
+- [x] Example `250 km`, `6.4 L/100 km`, `1.75 €/L` produces `16.00 L` and `28.00 €` (wording may differ).
+- [x] The learner has manually checked both examples and at least one additional self-chosen example.
 - [ ] Before final review, the learner can explain where input values come from, why numeric conversion is needed, how the calculation flows through the program, and how the result reaches the output.
 
 Acceptance criteria establish readiness for review; they do not by themselves prove skill mastery.
@@ -106,7 +106,11 @@ Fill this section as repository evidence exists.
 - Pull request: `#14`
 - Relevant commit / merge commit: `pending`
 - Prior artifact state: `n/a`
-- Additional evidence: Local Python runtime verified with `py --version` -> `Python 3.13.14`.
+- Additional evidence:
+  - Local Python runtime verified with `py --version` -> `Python 3.13.14`.
+  - Learner-provided local implementation uses three numeric inputs, arithmetic for fuel usage and trip cost, and f-string output formatting.
+  - Manual examples observed: `250 / 6.4 / 1.75` -> `16.00 L`, `28.00 €`; `100 / 5 / 2` -> `5.00 L`, `10.00 €`; self-chosen `1230 / 12.55 / 2.10` -> `154.37 L`, `324.17 €`.
+  - Learner explained the arithmetic flow correctly. Final explanation evidence remains open because numeric input conversion and `:.2f` formatting semantics require clarification.
 
 ## Tutor Assistance Record
 
