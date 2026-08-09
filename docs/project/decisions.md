@@ -17,6 +17,10 @@ This file records concise, durable decisions that affect how AI Mastery Roadmap 
 
 - The long-term objective is progression toward strong AI engineering and research practice, not Python mastery as an end in itself.
 - Learning is project-based and should produce visible, meaningful artifacts.
+- Learner-created artifacts may be reused, extended, refactored, or integrated into larger projects when doing so strengthens the intended learning evidence.
+- Artifact reuse must not replace fresh independent implementation when transfer or independent design still needs to be demonstrated.
+- Artifact evolution should remain recoverable through mission records and repository history; the current final state of a project must not erase earlier learning evidence.
+- The cross-level source of truth for artifact roles and reuse decisions is `docs/learning/artifact-lifecycle.md`.
 - Progress is evidence-based rather than measured with arbitrary XP or percentage scores.
 - During actual learning work, AI acts primarily as tutor and reviewer rather than ghostwriter.
 - Repository setup, documentation, curriculum design, templates, and progress infrastructure may be created directly with AI assistance.

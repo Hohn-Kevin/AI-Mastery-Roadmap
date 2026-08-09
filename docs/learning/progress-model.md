@@ -94,6 +94,24 @@ Allowed initial statuses are defined in `learning-model.md`:
 
 Evidence references should point to repository artifacts whenever possible.
 
+## Artifact Evidence and Evolution
+
+Artifacts may evolve across several missions according to `artifact-lifecycle.md`.
+
+Because of that, the latest contents of a project path are not always sufficient evidence for an earlier mission. Later refactoring or extension may substantially change what the learner originally produced.
+
+When an evolving artifact matters to progress evidence, the detailed mission record should make the relevant historical state recoverable. Suitable references may include the mission identifier, artifact path, pull request, commit or merge commit, and the relationship to the preceding artifact or mission.
+
+`progress/progress.json` should remain compact. It does not need to duplicate this full artifact history; concise evidence references may point to the mission records that preserve it.
+
+A future tutor assessing a skill should distinguish:
+
+- capability newly demonstrated in the referenced mission;
+- capability merely inherited from reused code; and
+- capability demonstrated by understanding, refactoring, extending, or replacing existing learner-written work.
+
+Reuse alone is not evidence that the learner can reproduce a skill independently in a fresh context.
+
 ## Updating Progress
 
 Progress should be updated when meaningful evidence changes the learning state, for example:
@@ -101,6 +119,7 @@ Progress should be updated when meaningful evidence changes the learning state, 
 - a mission is completed;
 - a boss challenge is reviewed;
 - a skill is demonstrated independently;
+- deliberate artifact evolution provides new evidence about understanding, reuse, or refactoring;
 - a recurring gap is identified;
 - a review mission resolves a previous gap;
 - progression to a new level is justified.
@@ -114,6 +133,8 @@ Progress should not be changed simply to make the learner appear further along.
 If the state file says a mission is complete but the expected artifact or review does not exist, a tutor should treat that as a state inconsistency and resolve it rather than assuming completion.
 
 Likewise, chat memory must not silently override committed repository state.
+
+For an evolving artifact, the current project contents also must not silently replace historical mission evidence. The relevant Git or pull-request state should be inspected when later changes make the earlier evidence ambiguous.
 
 ## Initial State
 
@@ -131,4 +152,4 @@ The next step after the framework phase is to define the first detailed curricul
 
 ## Future Extension
 
-Possible future additions include timestamps, level completion records, richer evidence metadata, assessment history, or generated dashboards. They are intentionally excluded from the initial model until a real need appears.
+Possible future additions include timestamps, level completion records, richer evidence metadata, assessment history, explicit artifact relationships, or generated dashboards. They are intentionally excluded from the initial model until a real need appears.
