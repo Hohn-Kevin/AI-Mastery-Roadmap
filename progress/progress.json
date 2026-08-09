@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "current_level": 0,
-  "current_mission": null,
+  "current_level": 1,
+  "current_mission": "L01-M001",
   "completed_missions": [],
   "skills": {},
   "review_queue": [],
   "open_challenges": [],
   "completed_challenges": [],
   "recent_reflections": [],
-  "next_recommended_action": "Instantiate and activate L01-M001 — Fuel Cost Estimator using the mission system."
+  "next_recommended_action": "Continue L01-M001 — Fuel Cost Estimator from the active mission file and draft pull request."
 }
