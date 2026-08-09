@@ -8,7 +8,7 @@ This file records concise, durable decisions that affect how AI Mastery Roadmap 
 - Project/governance documentation lives under `docs/project/`.
 - Learning-system documentation lives under `docs/learning/`.
 - Detailed level curricula live under `levels/`, not under general project documentation.
-- Mission definitions live under `missions/`.
+- Instantiated mission definitions and completion records live under `missions/`.
 - Learner-built durable artifacts live under `projects/`.
 - Compact current learning state lives under `progress/`.
 - The GitHub Wiki is not used for now; documentation remains version-controlled in the repository.
@@ -23,7 +23,18 @@ This file records concise, durable decisions that affect how AI Mastery Roadmap 
 - The cross-level source of truth for artifact roles and reuse decisions is `docs/learning/artifact-lifecycle.md`.
 - Progress is evidence-based rather than measured with arbitrary XP or percentage scores.
 - During actual learning work, AI acts primarily as tutor and reviewer rather than ghostwriter.
-- Repository setup, documentation, curriculum design, templates, and progress infrastructure may be created directly with AI assistance.
+- Repository setup, documentation, curriculum design, mission definitions/administration, templates, and progress infrastructure may be created directly with AI assistance.
+- The learner remains responsible for the core solution and their own explanation/reflection during active learning work.
+
+## Mission System
+
+- `docs/learning/mission-system.md` is the cross-level source of truth for canonical mission identifiers, mission-file structure, mission lifecycle, evidence recording, and mission operation.
+- Curricula may plan future missions without pre-creating all mission files; `missions/` contains instantiated learning work.
+- Canonical mission identifiers include the roadmap level and mission type so cross-level evidence remains unambiguous.
+- One instantiated mission normally uses one GitHub Issue, one issue branch, one mission file, and one pull request covering the complete learning cycle.
+- Mission pull requests are normally opened as drafts while learner work is active and become the review surface for mission completion.
+- `main` represents the last accepted state; an active mission branch may intentionally contain newer mission/progress state until accepted and merged.
+- Mission completion and skill mastery are separate decisions; completion alone does not automatically promote every target skill.
 
 ## Git and GitHub
 
@@ -44,7 +55,7 @@ This file records concise, durable decisions that affect how AI Mastery Roadmap 
 - Work should remain inside the current issue's scope.
 - New ideas outside the active scope should normally become separate issues.
 - The project should prefer the smallest sufficient structure and avoid premature complexity.
-- Major changes to learning philosophy, progress semantics, AI-assistance boundaries, or level structure require an explicit scoped change rather than an incidental edit.
+- Major changes to learning philosophy, progress semantics, AI-assistance boundaries, mission-system semantics, or level structure require an explicit scoped change rather than an incidental edit.
 
 ## Decisions Intentionally Deferred
 
@@ -54,5 +65,6 @@ The following should be decided when a concrete need exists rather than prematur
 - release/versioning convention;
 - automated CI/validation workflows;
 - dependency/security configuration;
-- detailed curricula for individual levels;
-- exact mission file format beyond the learning-model requirements.
+- detailed curricula for later individual levels;
+- automated mission generators or dashboards;
+- richer mission/progress metadata beyond demonstrated need.
