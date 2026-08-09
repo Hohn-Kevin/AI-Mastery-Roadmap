@@ -1,12 +1,16 @@
 {
   "schema_version": 1,
   "current_level": 1,
-  "current_mission": "L01-M001",
-  "completed_missions": [],
+  "current_mission": null,
+  "completed_missions": [
+    "L01-M001"
+  ],
   "skills": {},
   "review_queue": [],
   "open_challenges": [],
   "completed_challenges": [],
-  "recent_reflections": [],
-  "next_recommended_action": "Review and merge PR #14 for L01-M001 after learner confirmation."
+  "recent_reflections": [
+    "missions/level-01/L01-M001-fuel-cost-estimator.md"
+  ],
+  "next_recommended_action": "Instantiate and activate L01-M002 — Time Budget Planner using the mission system."
 }
