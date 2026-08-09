@@ -118,7 +118,7 @@ Git and GitHub continue to be used as the project workflow, but Git proficiency 
 
 ## Level 1 Artifact Strategy
 
-Level 1 applies the repository-wide artifact lifecycle principle being formalized in Issue #9.
+Level 1 applies the repository-wide artifact-lifecycle direction captured in Issue #9. Issue #9 remains the source for defining the durable cross-level model; this curriculum only applies that direction to Level 1 and should be aligned with the final global rule if #9 changes it.
 
 The curriculum should produce a **mixture** of artifact types rather than treating every mission as disposable or forcing every mission into one long-lived project.
 
