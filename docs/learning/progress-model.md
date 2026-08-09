@@ -17,6 +17,18 @@ The progress state should be:
 - easy to extend when the learning system becomes more detailed;
 - independent of a particular AI provider or application.
 
+## Accepted State and Active Mission State
+
+Protected `main` represents the last accepted learning state.
+
+A real mission is performed on a dedicated branch and normally has an open draft or review pull request. While that mission is active, its branch may contain a newer `progress/progress.json` than `main`.
+
+A future tutor must therefore inspect open mission Issues and pull requests before concluding from `main` that no mission is active. The active mission branch contains the working state; `main` remains the last accepted baseline until review and merge.
+
+This model avoids a separate administrative pull request merely to announce that a mission has started.
+
+The detailed workflow is defined in `mission-system.md`.
+
 ## State Fields
 
 The initial state contains the following top-level fields.
@@ -27,17 +39,27 @@ Version of the progress-state structure. This allows the format to evolve later 
 
 ### `current_level`
 
-The active roadmap level. Before the first learning curriculum is initialized, this is `0`.
+The active roadmap level.
+
+Before the first real learning mission begins, this remains `0` even if a curriculum already exists. Activating the first mission is the point at which the mission branch changes this to `1`.
+
+Later level changes should likewise represent actual learning progression rather than curriculum availability alone.
 
 ### `current_mission`
 
-Identifier of the mission currently being worked on, or `null` when no learning mission is active.
+Canonical identifier of the mission currently being worked on, or `null` when no learning mission is active in that state.
+
+Canonical mission identifiers are defined in `mission-system.md`, for example `L01-M001`.
+
+During an active mission, the branch copy of this field identifies the mission. After accepted review, the mission branch clears it before merge.
 
 ### `completed_missions`
 
-Ordered list of completed mission identifiers.
+Ordered list of completed canonical mission identifiers.
 
 This is an index, not the full history. Detailed completion evidence belongs with the relevant mission and project artifacts.
+
+Normal and review missions use this list. Boss/challenge completion is additionally represented in the challenge fields below.
 
 ### `skills`
 
@@ -51,23 +73,27 @@ Ordered list of skills or topics that require targeted review before or during f
 
 Entries should be created because repository evidence justifies review, not merely because time has passed.
 
+A completed review mission should update the relevant queue entry according to the new evidence rather than automatically assuming the gap was resolved.
+
 ### `open_challenges`
 
-Identifiers for boss challenges or larger assessments that have been started or assigned but not completed.
+Canonical identifiers for boss challenges or larger assessments that have been started or assigned but not completed.
 
 ### `completed_challenges`
 
-Identifiers for completed boss challenges.
+Canonical identifiers for completed boss challenges.
 
 ### `recent_reflections`
 
-References to the most relevant recent learner reflections. The full reflection content should live with durable mission or project documentation rather than being duplicated into this state file.
+References to the most relevant recent learner reflections. The full reflection content lives in durable mission records rather than being duplicated into this state file.
 
 ### `next_recommended_action`
 
 A concise repository-state instruction for the next tutor. It is not a substitute for reading the relevant files.
 
-Before learning begins, the value points to curriculum initialization rather than inventing a mission.
+When no mission is active, it should identify the next appropriate repository action, such as instantiating the next curriculum mission or addressing a blocking review need.
+
+When a mission is active on a branch, that branch's value should normally point to continuing or reviewing the active mission.
 
 ## Skill Entries
 
@@ -77,8 +103,8 @@ When skills begin to be tracked, a minimal skill entry should follow this shape:
 {
   "status": "practicing",
   "evidence": [
-    "missions/003",
-    "projects/example-project"
+    "L01-M003",
+    "missions/level-01/L01-M003-text-normalizer.md"
   ],
   "note": "Can use the concept independently in familiar cases; needs more transfer practice."
 }
@@ -93,6 +119,8 @@ Allowed initial statuses are defined in `learning-model.md`:
 - `review_needed`
 
 Evidence references should point to repository artifacts whenever possible.
+
+Mission completion does not automatically promote every target skill. Status changes must follow the evidence recorded during review.
 
 ## Artifact Evidence and Evolution
 
@@ -112,16 +140,44 @@ A future tutor assessing a skill should distinguish:
 
 Reuse alone is not evidence that the learner can reproduce a skill independently in a fresh context.
 
+## Mission Activation
+
+When a mission is instantiated and learner work begins, the mission branch updates progress according to `mission-system.md`.
+
+At minimum:
+
+- `current_level` identifies the mission's level;
+- `current_mission` contains its canonical identifier;
+- an active boss is also represented in `open_challenges` where applicable;
+- `next_recommended_action` points to continuing the active mission.
+
+This working state does not reach `main` until the mission is accepted and merged.
+
+## Mission Completion
+
+Before an accepted mission branch is merged:
+
+- clear `current_mission`;
+- add the canonical mission identifier to `completed_missions` for normal/review missions;
+- move boss identifiers from `open_challenges` to `completed_challenges` when applicable;
+- update skill evidence/statuses only where review justifies it;
+- update the review queue according to unresolved or resolved gaps;
+- reference the most relevant new reflection when useful;
+- set `next_recommended_action` from the accepted evidence and curriculum.
+
+The completed mission record remains the detailed source for reflection, assistance, review findings, and artifact history.
+
 ## Updating Progress
 
 Progress should be updated when meaningful evidence changes the learning state, for example:
 
+- a mission becomes active on its working branch;
 - a mission is completed;
 - a boss challenge is reviewed;
 - a skill is demonstrated independently;
 - deliberate artifact evolution provides new evidence about understanding, reuse, or refactoring;
 - a recurring gap is identified;
-- a review mission resolves a previous gap;
+- a review mission resolves or changes a previous gap;
 - progression to a new level is justified.
 
 Progress should not be changed simply to make the learner appear further along.
@@ -130,15 +186,17 @@ Progress should not be changed simply to make the learner appear further along.
 
 `progress/progress.json` summarizes the current state but does not override contradictory evidence in committed work.
 
-If the state file says a mission is complete but the expected artifact or review does not exist, a tutor should treat that as a state inconsistency and resolve it rather than assuming completion.
+If the state file says a mission is complete but the expected mission record, artifact, or review does not exist, a tutor should treat that as a state inconsistency and resolve it rather than assuming completion.
 
 Likewise, chat memory must not silently override committed repository state.
 
 For an evolving artifact, the current project contents also must not silently replace historical mission evidence. The relevant Git or pull-request state should be inspected when later changes make the earlier evidence ambiguous.
 
+During active work, an open mission branch may intentionally contain a newer state than `main`. This is not a conflict; it is the working lifecycle defined in `mission-system.md`.
+
 ## Initial State
 
-The initial state deliberately represents a journey that has not started:
+Until the first actual learning mission is activated, the state represents a journey whose learning execution has not yet started:
 
 - level `0`;
 - no active mission;
@@ -148,8 +206,8 @@ The initial state deliberately represents a journey that has not started:
 - no review queue;
 - no learner reflections.
 
-The next step after the framework phase is to define the first detailed curriculum before assigning Mission 1.
+After the framework and Level 1 curriculum are ready, the next step is to instantiate and activate **`L01-M001` — Fuel Cost Estimator** according to `mission-system.md`.
 
 ## Future Extension
 
-Possible future additions include timestamps, level completion records, richer evidence metadata, assessment history, explicit artifact relationships, or generated dashboards. They are intentionally excluded from the initial model until a real need appears.
+Possible future additions include timestamps, level completion records, richer evidence metadata, assessment history, explicit artifact relationships, or generated dashboards. They are intentionally excluded until a real need appears.
