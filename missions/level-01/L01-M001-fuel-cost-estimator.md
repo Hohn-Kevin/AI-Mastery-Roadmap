@@ -7,7 +7,7 @@
 | Mission ID | `L01-M001` |
 | Level | `1 — Python Foundations` |
 | Type | `mission` |
-| Status | `review` |
+| Status | `completed` |
 | Curriculum | `levels/level-01-python-foundations.md` — Segment 1 / M001 |
 | GitHub Issue | `#13` |
 | Artifact Role | `standalone` |
@@ -105,7 +105,7 @@ Fill this section as repository evidence exists.
 - GitHub Issue: `#13`
 - Pull request: `#14`
 - Learner implementation commit: `e517899f7aa5d8c1d56ae01b2ba2f5220f442565`
-- Merge commit: `pending`
+- Merge: PR #14 using squash merge; the authoritative merge SHA is recorded by GitHub on the pull request.
 - Prior artifact state: `n/a`
 - Additional evidence:
   - Local Python runtime verified with `py --version` -> `Python 3.13.14`.
@@ -167,4 +167,4 @@ Aus dieser Mission explizit nichts. Mal sehen, was die Zukunft bringt.
 
 ### Completion Decision
 
-Accepted for merge. The mission remains in `review` until PR #14 is explicitly approved for merge by the learner and the post-merge completion/progress state is recorded.
+Accepted by tutor and explicitly approved for merge by the learner on 2026-08-09. The mission completion state is recorded before squash-merging PR #14.
