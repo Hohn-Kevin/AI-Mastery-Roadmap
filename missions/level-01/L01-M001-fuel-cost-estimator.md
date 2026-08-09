@@ -75,8 +75,8 @@ The learner chooses the exact variable names, program order, prompts, and wordin
 
 - [x] A usable Python 3 interpreter has been installed or verified locally.
 - [x] The learner can identify the interpreter command used on the current machine and show its version.
-- [ ] The artifact contains a learner-created Python source file at `projects/level-01/fuel-cost-estimator/fuel_cost_estimator.py`.
-- [ ] The learner can run the source file from the terminal without the tutor controlling every command.
+- [x] The artifact contains a learner-created Python source file at `projects/level-01/fuel-cost-estimator/fuel_cost_estimator.py`.
+- [x] The learner can run the source file from the terminal without the tutor controlling every command.
 - [x] The program asks for trip distance in kilometers.
 - [x] The program asks for fuel consumption in liters per 100 kilometers.
 - [x] The program asks for fuel price in euros per liter.
@@ -104,11 +104,14 @@ Fill this section as repository evidence exists.
 - Artifact: `projects/level-01/fuel-cost-estimator/`
 - GitHub Issue: `#13`
 - Pull request: `#14`
-- Relevant commit / merge commit: `pending`
+- Learner implementation commit: `e517899f7aa5d8c1d56ae01b2ba2f5220f442565`
+- Merge commit: `pending`
 - Prior artifact state: `n/a`
 - Additional evidence:
   - Local Python runtime verified with `py --version` -> `Python 3.13.14`.
-  - Learner-provided local implementation uses three numeric inputs, arithmetic for fuel usage and trip cost, and f-string output formatting.
+  - Learner-created implementation is present on the mission branch and in PR #14.
+  - Learner ran the source file locally from the terminal and demonstrated the edit-run-observe cycle.
+  - Learner implementation uses three numeric inputs, arithmetic for fuel usage and trip cost, and f-string output formatting.
   - Manual examples observed: `250 / 6.4 / 1.75` -> `16.00 L`, `28.00 €`; `100 / 5 / 2` -> `5.00 L`, `10.00 €`; self-chosen `1230 / 12.55 / 2.10` -> `154.37 L`, `324.17 €`.
   - Learner correctly explained that `input()` initially returns text, numeric conversion is required for the intended arithmetic, assignment stores the evaluated result in `fuel_usage`, and `:.2f` changes the printed representation rather than the stored numeric value. The tutor initially misread the learner's first `:.2f` explanation; the learner had already described it as an output-formatting effect.
 
@@ -116,7 +119,7 @@ Fill this section as repository evidence exists.
 
 Record only assistance that materially affects interpretation of the learning evidence.
 
-- None yet.
+- Tutor provided the initial local run/edit/run bootstrap and generic syntax examples for `input()`, `float()`, and f-string decimal formatting. The learner derived the fuel calculation, wrote the estimator implementation, selected names/output wording, and performed the mission test runs.
 
 ## Learner Reflection
 
