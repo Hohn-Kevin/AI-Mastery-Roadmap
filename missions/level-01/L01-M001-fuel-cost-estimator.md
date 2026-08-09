@@ -87,7 +87,7 @@ The learner chooses the exact variable names, program order, prompts, and wordin
 - [x] Example `100 km`, `5 L/100 km`, `2 €/L` produces `5.00 L` and `10.00 €` (wording may differ).
 - [x] Example `250 km`, `6.4 L/100 km`, `1.75 €/L` produces `16.00 L` and `28.00 €` (wording may differ).
 - [x] The learner has manually checked both examples and at least one additional self-chosen example.
-- [ ] Before final review, the learner can explain where input values come from, why numeric conversion is needed, how the calculation flows through the program, and how the result reaches the output.
+- [x] Before final review, the learner can explain where input values come from, why numeric conversion is needed, how the calculation flows through the program, and how the result reaches the output.
 
 Acceptance criteria establish readiness for review; they do not by themselves prove skill mastery.
 
@@ -110,7 +110,7 @@ Fill this section as repository evidence exists.
   - Local Python runtime verified with `py --version` -> `Python 3.13.14`.
   - Learner-provided local implementation uses three numeric inputs, arithmetic for fuel usage and trip cost, and f-string output formatting.
   - Manual examples observed: `250 / 6.4 / 1.75` -> `16.00 L`, `28.00 €`; `100 / 5 / 2` -> `5.00 L`, `10.00 €`; self-chosen `1230 / 12.55 / 2.10` -> `154.37 L`, `324.17 €`.
-  - Learner explained the arithmetic flow correctly. Final explanation evidence remains open because numeric input conversion and `:.2f` formatting semantics require clarification.
+  - Learner correctly explained that `input()` initially returns text, numeric conversion is required for the intended arithmetic, assignment stores the evaluated result in `fuel_usage`, and `:.2f` changes the printed representation rather than the stored numeric value. The tutor initially misread the learner's first `:.2f` explanation; the learner had already described it as an output-formatting effect.
 
 ## Tutor Assistance Record
 
